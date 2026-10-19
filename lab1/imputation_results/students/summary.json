@@ -1,0 +1,37 @@
+{
+    "dataset": "ilayaraja07/data-cleaning-feature-imputation/versions/1",
+    "file": "Students_Performance_knn.csv",
+    "rows": 1000,
+    "columns": 8,
+    "real_missing_before": 25,
+    "real_missing_after": 0,
+    "numeric_missing_before": 0,
+    "selected_numeric_imputation": "knn",
+    "categorical_imputation": "mode",
+    "selected_normalization": "minmax",
+    "normalization_reason": "Оцінки мають спільну обмежену шкалу 0–100. MinMax переводить наявні діапазони в [0, 1]. Це min/max вибірки, а не ділення на теоретичні 100. Реальні пропуски лише у lunch: застосовано моду.",
+    "comparison": [
+        {
+            "method": "knn",
+            "nrmse_mean": 0.6070291705566898,
+            "nrmse_std": 0.019255418166390356
+        },
+        {
+            "method": "mean",
+            "nrmse_mean": 1.0186316460543352,
+            "nrmse_std": 0.051553220868842856
+        },
+        {
+            "method": "median",
+            "nrmse_mean": 1.0216365106014382,
+            "nrmse_std": 0.05232059053268024
+        },
+        {
+            "method": "mode",
+            "nrmse_mean": 1.0491138319375672,
+            "nrmse_std": 0.03932389189486456
+        }
+    ],
+    "evaluation_note": "Artificial MCAR masks on observed numeric values; not ground truth for real gaps.",
+    "quality_note": "Wine quality is excluded from distances and scaling; no predictive model is trained."
+}

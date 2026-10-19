@@ -1,0 +1,6 @@
+requests
+beautifulsoup4
+matplotlib
+kagglehub[pandas-datasets]
+pandas
+scikit-learn

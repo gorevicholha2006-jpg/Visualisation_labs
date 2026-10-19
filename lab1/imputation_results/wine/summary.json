@@ -1,0 +1,37 @@
+{
+    "dataset": "ilayaraja07/data-cleaning-feature-imputation/versions/1",
+    "file": "Wine_Quality.csv",
+    "rows": 6497,
+    "columns": 13,
+    "real_missing_before": 38,
+    "real_missing_after": 0,
+    "numeric_missing_before": 38,
+    "selected_numeric_imputation": "knn",
+    "categorical_imputation": "mode",
+    "selected_normalization": "robust",
+    "normalization_reason": "Числові показники мають різні одиниці, асиметрію й значення поза межами 1.5 IQR. RobustScaler використовує медіану та IQR, зменшуючи вплив крайніх значень на масштаб. Це обґрунтований вибір для завдання, а не доведений оптимум для прогнозування.",
+    "comparison": [
+        {
+            "method": "knn",
+            "nrmse_mean": 0.7190267752082926,
+            "nrmse_std": 0.022472428736866022
+        },
+        {
+            "method": "mean",
+            "nrmse_mean": 1.0195439099904053,
+            "nrmse_std": 0.04042147899353263
+        },
+        {
+            "method": "median",
+            "nrmse_mean": 1.0452918764577281,
+            "nrmse_std": 0.043120365076277235
+        },
+        {
+            "method": "mode",
+            "nrmse_mean": 1.194644798041081,
+            "nrmse_std": 0.031928821186915715
+        }
+    ],
+    "evaluation_note": "Artificial MCAR masks on observed numeric values; not ground truth for real gaps.",
+    "quality_note": "Wine quality is excluded from distances and scaling; no predictive model is trained."
+}
