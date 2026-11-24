@@ -1,0 +1,7 @@
+gensim>=4.4
+ipykernel
+matplotlib
+nltk
+numpy
+pyspellchecker
+scikit-learn
