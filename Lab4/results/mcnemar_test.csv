@@ -1,0 +1,6 @@
+,value
+logistic_only_correct,37.0
+forest_only_correct,63.0
+accuracy_difference_logistic_minus_forest,-0.018452803406671398
+p_value,0.012032975725363479
+alpha,0.05
